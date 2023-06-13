@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { onSuccess, setUser } from "stores/slicer/authSlice";
+import { useNavigate } from "react-router-dom";
 
 import { googleLogout } from "@react-oauth/google";
 import GoogleSignUp from "./GoogleSignUp";
@@ -12,6 +13,13 @@ import FacebookSignUp from "./FacebookSignUp";
 const SignUpComponent = () => {
   const profile = useSelector((state) => state.authData.profile);
   const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (profile.email) {
+      navigate("/");
+    }
+  }, [profile]);
 
   const logOut = () => {
     googleLogout();

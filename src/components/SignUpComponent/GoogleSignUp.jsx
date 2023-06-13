@@ -6,6 +6,7 @@ import axios from "axios";
 
 const GoogleSignUp = () => {
   const user = useSelector((state) => state.authData.user);
+  const profile = useSelector((state) => state.authData.profile);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -28,7 +29,9 @@ const GoogleSignUp = () => {
   }, [user]);
 
   const login = useGoogleLogin({
-    onSuccess: (codeResponse) => dispatch(setUser(codeResponse)),
+    onSuccess: (codeResponse) => {
+      dispatch(setUser(codeResponse));
+    },
     onError: (error) => dispatch(onError(error)),
   });
 
