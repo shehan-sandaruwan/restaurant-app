@@ -1,0 +1,22 @@
+.signup-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10rem;
+  gap: 2rem;
+  height: 100%;
+}
+
+.signup-wrapper button {
+  border: none;
+  background-color: var(--text-color-secondary-dark);
+  color: #fff;
+  line-height: 2rem;
+  padding: 0 2rem;
+}
+
+.signup-wrapper button span {
+  display: inline-block;
+  margin-right: 1rem;
+}

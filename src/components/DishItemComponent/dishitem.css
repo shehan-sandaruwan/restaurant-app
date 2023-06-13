@@ -1,0 +1,81 @@
+.card-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 2rem;
+  justify-content: space-between;
+  box-shadow: 0 1px 4px #00000014;
+}
+
+.card-wrapper div {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-wrapper div p {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.card-wrapper figure img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+
+.dish-item-list a {
+  font-size: 22px;
+  color: #2e3333;
+}
+
+.dish-item-list ul {
+  columns: 2;
+  column-count: 2;
+}
+.dish-item-list ul li {
+  page-break-inside: avoid;
+  break-inside: avoid-column;
+  margin-bottom: 1.3em;
+  width: 590px;
+}
+
+.dish-item-list {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  margin-top: 4rem;
+  padding: 3rem;
+}
+
+.card-wrapper h2 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #2e3333;
+}
+
+.card-wrapper p,
+.card-wrapper label {
+  font-size: 14px;
+  color: #585c5c;
+}
+
+@media (max-width: 550px) {
+  .dish-item-list ul li {
+    width: 300px;
+  }
+
+  .dish-item-list ul {
+    columns: 1;
+    column-count: 1;
+  }
+  .dish-item-list {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .card-wrapper p {
+    width: 100px;
+    text-overflow: ellipsis;
+  }
+}

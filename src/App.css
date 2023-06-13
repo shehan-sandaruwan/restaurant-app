@@ -1,3 +1,11 @@
+:root {
+  --text-color-promary: rgba(0, 0, 0, 0.65);
+  --border-color-primary: #e8ebeb;
+  --text-color-secondary: #00ccbc;
+  --text-color-secondary-dark: #00a396;
+  --font-size-large: 40px;
+}
+
 .App {
   text-align: center;
 }
@@ -13,6 +21,10 @@
   }
 }
 
+a {
+  text-decoration: none;
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -26,6 +38,10 @@
 
 .App-link {
   color: #61dafb;
+}
+
+ul li {
+  list-style-type: none;
 }
 
 @keyframes App-logo-spin {
