@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { act } from "react-dom/test-utils";
 
 export const authSlice = createSlice({
   name: "authData",
@@ -15,6 +16,7 @@ export const authSlice = createSlice({
   reducers: {
     setUser: (state, action) => {
       state.user = action.payload;
+      state.requestToken = action.payload.access_token;
     },
     onSuccess: (state, action) => {
       state.profile = {
@@ -29,6 +31,7 @@ export const authSlice = createSlice({
   },
 });
 
-export const { setUser, onError, onSuccess } = authSlice.actions;
+export const { setUser, onError, onSuccess, setRequestToken } =
+  authSlice.actions;
 
 export default authSlice.reducer;

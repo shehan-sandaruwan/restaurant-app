@@ -3,7 +3,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { onSuccess, onError, setUser } from "stores/slicer/authSlice";
 import { useGoogleLogin } from "@react-oauth/google";
 import axios from "axios";
-import { GoogleLogin } from "@react-oauth/google";
 
 const GoogleSignUp = () => {
   const user = useSelector((state) => state.authData.user);
