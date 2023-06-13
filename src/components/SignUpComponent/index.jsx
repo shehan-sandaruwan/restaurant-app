@@ -28,7 +28,7 @@ const SignUpComponent = () => {
           <React.Fragment>
             <GoogleSignUp />
             <FacebookSignUp />
-            <button>
+            <button style={{ opacity: 0.5 }}>
               {" "}
               <span>
                 <Email color="#fff" />

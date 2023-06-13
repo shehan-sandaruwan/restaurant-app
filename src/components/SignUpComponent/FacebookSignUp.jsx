@@ -19,7 +19,7 @@ const FacebookSignUp = () => {
   return (
     <div>
       <FacebookLogin
-        appId="288316403617664"
+        appId="919153172715196"
         onSuccess={(response) => {
           responseFacebook(response);
         }}
